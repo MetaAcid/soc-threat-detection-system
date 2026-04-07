@@ -1,5 +1,6 @@
 from pathlib import Path
 import argparse
+import os
 
 from log_parser import parse_auth_log, parse_access_log
 from detector import run_all_detections
@@ -12,6 +13,12 @@ def main():
     default_auth_log = base_dir / "logs" / "auth.log"
     default_access_log = base_dir / "logs" / "access.log"
     default_output = base_dir / "output" / "alerts.json"
+
+    if not os.path.exists(args.auth):
+        raise FileNotFoundError(f"Auth log not found: {args.auth}")
+
+    if not os.path.exists(args.access):
+        raise FileNotFoundError(f"Access log not found: {args.access}")
 
     parser = argparse.ArgumentParser(description="SOC Threat Detection System")
     parser.add_argument("--auth", default=str(default_auth_log), help="Path to auth log file")
