@@ -14,18 +14,21 @@ def main():
     default_access_log = base_dir / "logs" / "access.log"
     default_output = base_dir / "output" / "alerts.json"
 
-    if not os.path.exists(args.auth):
-        raise FileNotFoundError(f"Auth log not found: {args.auth}")
+    parser = argparse.ArgumentParser(
+        description="SOC-style log analysis and threat detection tool"
+    )
 
-    if not os.path.exists(args.access):
-        raise FileNotFoundError(f"Access log not found: {args.access}")
-
-    parser = argparse.ArgumentParser(description="SOC Threat Detection System")
     parser.add_argument("--auth", default=str(default_auth_log), help="Path to auth log file")
     parser.add_argument("--access", default=str(default_access_log), help="Path to access log file")
     parser.add_argument("--output", default=str(default_output), help="Path to output JSON file")
 
     args = parser.parse_args()
+
+    if not os.path.exists(args.auth):
+        raise FileNotFoundError(f"Auth log not found: {args.auth}")
+
+    if not os.path.exists(args.access):
+        raise FileNotFoundError(f"Access log not found: {args.access}")
 
     auth_logs = parse_auth_log(args.auth)
     access_logs = parse_access_log(args.access)
