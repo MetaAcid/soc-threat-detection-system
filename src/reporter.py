@@ -8,14 +8,16 @@ def save_alerts_to_json(alerts: List[Dict], output_path: str) -> None:
 
 
 def print_alerts(alerts: List[Dict]) -> None:
+    print("\n=== ALERTS DETECTED ===")
+    print("=" * 30)
+
     if not alerts:
         print("No alerts detected.")
         return
 
-    print("\n=== ALERTS DETECTED ===")
-    print("=" * 30)
     for index, alert in enumerate(alerts, start=1):
         print(f"\n[{index}] {alert['type']}")
         print(f"Severity   : {alert['severity']}")
         print(f"Source IP  : {alert['source_ip']}")
+        print(f"Timestamp  : {alert.get('timestamp', 'N/A')}")
         print(f"Description: {alert['description']}")
