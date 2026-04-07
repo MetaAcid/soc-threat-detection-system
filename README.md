@@ -15,6 +15,11 @@ Python-проект, имитирующий базовые задачи SOC-ан
 - всплески серверных ошибок (5xx)
 - подозрительную активность по IP
 
+## CLI Usage
+
+```bash
+python src/main.py --auth logs/auth.log --access logs/access.log --output output/alerts.json
+
 ## Структура проекта
 
 ```text
