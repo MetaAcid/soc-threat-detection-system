@@ -9,11 +9,12 @@ from rules import (
 )
 
 
-def create_alert(alert_type: str, severity: str, source_ip: str, description: str) -> Dict:
+def create_alert(alert_type: str, severity: str, source_ip: str, description: str, timestamp: str = "N/A") -> Dict:
     return {
         "type": alert_type,
         "severity": severity,
         "source_ip": source_ip,
+        "timestamp": timestamp,
         "description": description
     }
 
