@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Brute Force",
+        "severity": "HIGH",
+        "source_ip": "192.168.1.10",
+        "description": "Detected 6 failed login attempts from 192.168.1.10"
+    },
+    {
+        "type": "Suspicious Authentication Activity",
+        "severity": "MEDIUM",
+        "source_ip": "10.10.10.10",
+        "description": "Detected repeated failed login attempts from 10.10.10.10: 3"
+    },
+    {
+        "type": "Path Scanning / Reconnaissance",
+        "severity": "HIGH",
+        "source_ip": "192.168.1.30",
+        "description": "Detected suspicious probing activity from 192.168.1.30: 5 suspicious requests"
+    },
+    {
+        "type": "Server Error Spike",
+        "severity": "MEDIUM",
+        "source_ip": "multiple",
+        "description": "Detected spike in server-side errors: 5 responses with 5xx status"
+    }
+]

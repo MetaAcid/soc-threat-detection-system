@@ -1,0 +1,10 @@
+Apr  7 10:00:01 server sshd[1001]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr  7 10:00:05 server sshd[1002]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr  7 10:00:10 server sshd[1003]: Failed password for admin from 192.168.1.10 port 22 ssh2
+Apr  7 10:00:15 server sshd[1004]: Failed password for user from 192.168.1.10 port 22 ssh2
+Apr  7 10:00:20 server sshd[1005]: Failed password for test from 192.168.1.10 port 22 ssh2
+Apr  7 10:00:25 server sshd[1006]: Failed password for guest from 192.168.1.10 port 22 ssh2
+Apr  7 10:05:01 server sshd[1010]: Accepted password for nikita from 192.168.1.25 port 22 ssh2
+Apr  7 10:06:01 server sshd[1011]: Failed password for root from 10.10.10.10 port 22 ssh2
+Apr  7 10:06:10 server sshd[1012]: Failed password for root from 10.10.10.10 port 22 ssh2
+Apr  7 10:06:20 server sshd[1013]: Failed password for root from 10.10.10.10 port 22 ssh2
