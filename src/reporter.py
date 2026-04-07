@@ -12,7 +12,8 @@ def print_alerts(alerts: List[Dict]) -> None:
         print("No alerts detected.")
         return
 
-    print("=== ALERTS DETECTED ===")
+    print("\n=== ALERTS DETECTED ===")
+    print("=" * 30)
     for index, alert in enumerate(alerts, start=1):
         print(f"\n[{index}] {alert['type']}")
         print(f"Severity   : {alert['severity']}")
